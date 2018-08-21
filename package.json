@@ -1,6 +1,6 @@
 {
-  "name": "think-typescript",
-  "version": "1.0.4",
+  "name": "think-typescript2",
+  "version": "1.0.5",
   "description": "Use TypeScript transpile ts to js",
   "main": "index.js",
   "scripts": {
@@ -15,26 +15,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thinkjs/think-typescript.git"
+    "url": "git+https://github.com/hm496/think-typescript.git"
   },
   "keywords": [
     "think-typescript"
   ],
-  "author": {
-    "name": "lushijie",
-    "email": "lushijie1218@126.com"
-  },
-  "contributors": [
-    {
-      "name": "lushijie",
-      "email": "lushijie1218@126.com"
-    }
-  ],
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/thinkjs/think-typescript/issues"
+    "url": "https://github.com/hm496/think-typescript/issues"
   },
-  "homepage": "https://github.com/thinkjs/think-typescript#readme",
+  "homepage": "https://github.com/hm496/think-typescript#readme",
   "devDependencies": {
     "ava": "~0.18.1",
     "babel-eslint": "~7.1.1",
@@ -43,9 +33,11 @@
     "eslint-config-think": "~1.0.1",
     "nyc": "~10.1.2"
   },
+  "peerDependencies": {
+    "typescript": "*"
+  },
   "dependencies": {
     "line-column": "~1.0.2",
-    "think-helper": "~1.0.0",
-    "typescript": "^2.5.3"
+    "think-helper": "~1.0.0"
   }
 }
