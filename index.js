@@ -21,7 +21,7 @@ function typescriptTranspile (config) {
       sourceMap: true
     }
   }, options);
-  if (filePath.endsWith("d.ts")) {
+  if (filePath.endsWith(".d.ts")) {
     return true;
   }
   const content = fs.readFileSync(filePath, 'utf8');
