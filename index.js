@@ -4,9 +4,9 @@ const path = require('path');
 const ts = require('typescript');
 const lineColumn = require('line-column');
 
-function typescriptTranspile(config) {
-  const {srcPath, outPath, file, ext = '.js'} = config;
-  let {options} = config;
+function typescriptTranspile (config) {
+  const { srcPath, outPath, file, ext = '.js' } = config;
+  let { options } = config;
   const filePath = path.join(srcPath, file);
   const pPath = path.dirname(path.join(outPath, file));
   const relativePath = path.relative(pPath, path.join(srcPath, file));
@@ -21,7 +21,9 @@ function typescriptTranspile(config) {
       sourceMap: true
     }
   }, options);
-
+  if (filePath.endsWith("d.ts")) {
+    return true;
+  }
   const content = fs.readFileSync(filePath, 'utf8');
   const data = ts.transpileModule(content, options);
 
